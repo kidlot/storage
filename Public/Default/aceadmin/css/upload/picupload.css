@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+a:hover{color:#555}
+.radio-inline, .checkbox-inline {
+    margin-left: 10px;
+    margin-top: 0;
+}
+.active{background-color:#fff;}
+.unactive{background-color:#eee;}
+.first-cate {min-height:50px;}
+.first-cate li {min-height:50px;}
+.attr-cate {min-height:50px;}
+.attr-cate li {min-height:50px;}
+
+/* 商品编辑 */
+.checkbox-inline .input-sm{height:24px;}
+
+.ul_pics li{float:left;width:160px;height:160px;border:1px solid #ddd;padding:2px;text-align: center;margin:0 5px 5px 0;}
+.ul_pics li .img{width: 160px;height: 155px;display: table-cell;vertical-align: middle;}
+.ul_pics li img{max-width: 152px;max-height: 140px;vertical-align: middle;}
+.progress{position:relative;padding: 1px; border-radius:3px; margin:60px 0 0 0;} 
+.bar {background-color: green; display:block; width:0%; height:20px; border-radius:3px; } 
+.percent{position:absolute; height:20px; display:inline-block;top:3px; left:2%; color:#fff } 

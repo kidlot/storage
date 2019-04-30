@@ -1,0 +1,871 @@
+[ 2019-04-26T08:40:03+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002990s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0038s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0030s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0042s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.155944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.155964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009980s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007512s ]
+
+[ 2019-04-26T08:40:04+08:00 ] ::1 /Backstage/Storage/get_sku
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002243s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0034s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0146s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `goods_sn` = 'ASDASDA' ORDER BY size  [ RunTime:0.0005s ]
+
+[ 2019-04-26T08:40:09+08:00 ] ::1 /Backstage/Storage/update_storage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001703s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0032s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `size` = '12' AND `color` = '12' AND `goods_sn` = 'ASDASDA' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_goods_storage` (`storage`,`size`,`color`,`goods_sn`) VALUES ('12','12','12','ASDASDA') [ RunTime:0.0701s ]
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+
+[ 2019-04-26T08:40:14+08:00 ] ::1 /Backstage/Storage/update_storage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001874s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0032s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0028s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `size` = '222' AND `color` = '222' AND `goods_sn` = 'ASDASDA' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_goods_storage` (`storage`,`size`,`color`,`goods_sn`) VALUES ('222','222','222','ASDASDA') [ RunTime:0.0594s ]
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+
+[ 2019-04-26T08:40:20+08:00 ] ::1 /Backstage/Storage/update_storage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002512s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0038s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0098s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `size` = '222' AND `color` = '2222' AND `goods_sn` = 'ASDASDA' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_goods_storage` (`storage`,`size`,`color`,`goods_sn`) VALUES ('111','222','2222','ASDASDA') [ RunTime:0.0612s ]
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+
+[ 2019-04-26T08:40:26+08:00 ] ::1 /Backstage/Storage/update_storage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001867s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0045s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0055s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `size` = '2111' AND `color` = '1111' AND `goods_sn` = 'ASDASDA' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `tp_goods_storage` (`storage`,`size`,`color`,`goods_sn`) VALUES ('111','2111','1111','ASDASDA') [ RunTime:0.0523s ]
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, string given F:\XAMPPi\htdocs\storage\App\Backstage\Common\function.php 第 132 行.
+
+[ 2019-04-26T09:08:46+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002465s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0029s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0041s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0058s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2019-04-26T09:09:16+08:00 ] ::1 /Backstage/Storage/get_sku
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002562s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0034s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `goods_sn` = 'ASDASDA' ORDER BY size  [ RunTime:0.0005s ]
+
+[ 2019-04-26T09:09:48+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002882s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0162s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0031s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0039s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2019-04-26T09:09:48+08:00 ] ::1 /Backstage/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002075s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000048s ]
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 22 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 23 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003931s ]
+
+[ 2019-04-26T09:09:51+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003129s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0031s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0030s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0033s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2019-04-26T09:10:05+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002152s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0639s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0259s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2019-04-26T09:10:05+08:00 ] ::1 /Backstage/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001586s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 22 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 23 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007705s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2019-04-26T09:10:07+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002539s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0029s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0033s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2019-04-26T09:10:07+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001883s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0037s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2019-04-26T09:10:07+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002578s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0042s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0029s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2019-04-26T09:10:07+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001599s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0049s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0058s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2019-04-26T09:10:08+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002258s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0053s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0029s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2019-04-26T09:10:08+08:00 ] ::1 /Backstage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002694s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+NOTIC: [2] Declaration of Backstage\Model\AdminNavModel::getTreeData($type = 'tree', $order = '') should be compatible with Backstage\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\XAMPPi\htdocs\storage\App\Backstage\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `tp_admin_nav` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `tp_admin_nav` ORDER BY order_number,id is null,order_number,id  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0038s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000846s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2019-04-26T09:10:08+08:00 ] ::1 /Backstage/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001772s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 22 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 23 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2019-04-26T09:10:08+08:00 ] ::1 /Backstage/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001852s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 22 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 23 行.
+NOTIC: [8] Undefined variable: breadcrumbs F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\4db81945c2f5c9f30b960731fb50a59b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2019-04-26T09:10:10+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002294s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0029s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0092s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2019-04-26T09:10:10+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001766s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0034s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0034s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0041s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2019-04-26T09:10:10+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001696s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0026s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0031s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0051s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2019-04-26T09:10:10+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0024s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0043s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2019-04-26T09:10:11+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002168s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0031s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0035s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0046s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2019-04-26T09:10:11+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002515s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0029s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0099s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0031s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2019-04-26T09:10:13+08:00 ] ::1 /Backstage/Storage/get_sku
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001864s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0035s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `goods_sn` = 'ASDASDA' ORDER BY size  [ RunTime:0.0004s ]
+
+[ 2019-04-26T09:11:04+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000996s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002849s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0028s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0219s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0042s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2019-04-26T09:14:16+08:00 ] ::1 /Backstage/Storage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001428s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002996s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0036s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0027s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0056s ]
+SQL: SELECT ar1.title as title1,ar2.title as title2,ar3.title as title3,ar4.title as title4 FROM tp_auth_rule ar1 LEFT JOIN tp_auth_rule ar2 ON ar1.pid = ar2.id LEFT JOIN tp_auth_rule ar3 ON ar2.pid = ar3.id LEFT JOIN tp_auth_rule ar4 ON ar3.pid = ar4.id  WHERE ar1.name = 'Storage/index'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tp_goods` ORDER BY update_time desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_goods` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 60 行.
+NOTIC: [8] Undefined variable: _status F:\XAMPPi\htdocs\storage\Public\Runtime\Cache\Backstage\83c6db244b4a264ee7b9daea61f12cd4.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001202s ]
+
+[ 2019-04-26T09:14:19+08:00 ] ::1 /Backstage/Storage/get_sku
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001975s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0031s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0026s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `goods_sn` = 'ASDASDA' ORDER BY size  [ RunTime:0.0004s ]
+
+[ 2019-04-26T09:14:31+08:00 ] ::1 /Backstage/Storage/get_sku
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002690s ]
+NOTIC: [2] session_set_save_handler() expects parameter 1 to be SessionHandlerInterface, object given F:\XAMPPi\htdocs\storage\Framework\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `tp_auth_group_access` [ RunTime:0.0036s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM tp_auth_group_access a INNER JOIN tp_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tp_auth_rule` [ RunTime:0.0029s ]
+SQL: SELECT `condition`,`name` FROM `tp_auth_rule` WHERE `id` IN ('20','1','2','3','4','5','64','127','137','138','139','141','142','143','144','145','146','21','7','8','9','10','11','12','13','14','15','16','123','140','19','124','125','135','174','175','176','178','179','180','181') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tp_goods_storage` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `tp_goods_storage` WHERE `goods_sn` = 'ASDASDA' ORDER BY size  [ RunTime:0.0004s ]
+

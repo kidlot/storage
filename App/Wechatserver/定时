@@ -1,0 +1,5 @@
+1、打开linux
+2、crontab -e		//修改（类似vim编辑）
+0 * * * *  curl  http://xxxxxxx
+保存
+3、crontab -l		//查看

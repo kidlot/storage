@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>关键字回复</title>
+	<keywordcss />
+</head>
+<body class="d_menu">
+<!-- #section:basics/面包屑导航 -->
+	<include file="Index/breadcrumbs" />
+<!-- /section:basics/面包屑导航 -->
+<ul id="myTab" class="nav nav-tabs">
+<li><a href="{:U('index')}">被添加回复</a></li>
+<li><a href="{:U('beadded')}">自动回复</a></li>
+<li class="active"><a href="{:U('keywords')}">关键字回复</a></li>
+</ul>
+<div class="tab-pane fade in active" id="home">
+	<table class="table table-striped table-bordered table-hover table-condensed">
+		<tr>
+			<th width="10%">序号</th>
+			<th width="15%">规则名</th>
+			<th width="15%">关键字</th>
+			<th width="15%">回复</th>
+			<th width="15%">更新时间</th>
+		</tr>
+		<div class="btn_wrp">
+            <a href="javascript:void(0);" class="btn btn_add btn_primary" id="Js_rule_add" data-status="not"><i class="icon14_common add_white"></i>添加规则(初始化一条记录)</a>
+        </div>
+		<foreach name="_list" item="v" key="k">
+			<if condition="($v['isadd'] eq 1)"><tr class="clickgo bg-color"><else /><tr class="clickgo"></if>
+				<td>{$k+1}</td>
+				<td>{$v['title']}</td>
+				<td>{$v['keyword']}</td>
+				<if condition="($v['type'] eq 'news')"><td>图文</td><elseif condition="($v['type'] eq 'image')"><else /><td>文字</td></if>
+				<td>{$v['create_time']|time_format}</td>
+			</tr>
+			<tr class="kmain">
+				<td>
+				<div class="keywords_rule_ft" style="display:block;">
+					<div class="opr">
+						<a href="javascript:;" data-id="{$v['id']}" class="btn btn_primary Js_rule_save">保存</a>
+						<a href="javascript:;" data-id="{$v['id']}" class="btn btn_default Js_rule_del">删除</a>
+					</div>
+				</td>
+				<td colspan="4">
+					<div class="keywords_rule_bd">
+						<div class="rule_name_area">
+							<div class="frm_control_group">
+								<label for="" class="frm_label">规则名</label>
+								<div class="frm_controls">
+									<span class="frm_input_box" style="width: 350px;"><input style="margin: 0px;" type="text" class="frm_input" id="Js_ruleTitle_{$v['id']}" value="{$v['title']}"></span>
+									<p class="frm_tips">规则名最多60个字</p>
+								</div>
+							</div>
+						</div>
+						<div class="rule_name_area">
+							<div class="frm_control_group">
+								<label for="" class="frm_label">关键字</label>
+								<div class="frm_controls" style="float: left;">
+									<span class="frm_input_box" style="width: 350px;"><input style="margin: 0px;" type="text" class="frm_input" id="Js_ruleKeyword_{$v['id']}" value="{$v['keyword']}"></span>
+									<p class="frm_tips">多个关键字用逗号隔开</p>
+								</div>
+								<div class="opr">
+									<if condition="$v['mode'] eq 1">
+										<a href="javascript:;" id="Js_modeKeyword_{$v['id']}" class="keywords_mode_switch Js_keyword_mode" data-mode="1">已全匹配</a>
+									<else />
+										<a href="javascript:;" id="Js_modeKeyword_{$v['id']}" class="keywords_mode_switch Js_keyword_mode" data-mode="0">未全匹配</a>
+									</if>	
+								</div>
+							</div>
+							
+						</div>
+						<div class="keywords_tap reply ">
+							<div class="keywords_tap_bd">
+								<ul class="media_type_list">
+									<li class="tab_text" data-tooltip="文字"><a href="javascript:;" data-type="text" data-id="{$v['id']}" class="Js_reply_add" onclick="textshow(this);">&nbsp;<i class="icon_msg_sender"></i></a></li>
+									<li class="tab_appmsg jsMsgSenderPopBt" data-tooltip="图文"><a href="javascript:;" data-id="{$v['id']}" class="Js_reply_add">&nbsp;<i class="icon_msg_sender"></i></a></li>
+									<li class="tab_image jsMsgSenderPopBt_image tab_img" data-tooltip="图片"><a href="javascript:;" data-id="{$v['id']}" class="Js_reply_add">&nbsp;<i class="icon_msg_sender"></i></a></li>
+								</ul>
+								<ul class="keywords_list" id="Js_replyList_{$v['id']}">
+									<if condition="$v['type'] eq 'text'">
+										<li data-id="{$v['id']}" data-type="text" data-content="{$v['content']}" style="z-index: 0">
+											<div class="desc">
+												{$v['content']}
+											</div>
+										</li>
+									<elseif condition="$v['type'] eq 'news'"/>
+										<li data-id="{$v['id']}" data-type="news" data-content="{$v['media_id']}" style="z-index: 0;">
+											<div class="desc" style="width: 30%;">
+												<if condition="$v['data'][0][count]==1"><div class="appmsg_li" data-id="{$v['data'][0].id}" data-group_id="{$v['data'][0].group_id}" style="overflow:hidden" data-value="{$v['data'][0].media_id}">
+													<div class="appmsg_content">
+														<div class="appmsg_info">
+															<em class="appmsg_date">{$v['data'][0].ctime}</em>
+														</div>
+														<div class="appmsg_item">
+															<h6>{$v['data'][0].title}</h6>
+															<div class="main_img">
+																<img src="{$v['data'][0].cover_id|get_cover_url}"/>
+															</div>
+															<p class="desc" style="margin: 0;padding: 0;">{$v['data'][0].intro|json_decode}</p>
+														</div>
+													</div>
+												</div><else /><div class="appmsg_li" data-id="{$v['data'][0].id}" data-group_id="{$v['data'][0].group_id}" style="overflow:hidden" data-value="{$v['data'][0].media_id}">
+													<div class="appmsg_content">
+														<div class="appmsg_info">
+															<em class="appmsg_date">{$v['data'][0].ctime}</em>
+														</div>
+														<div class="appmsg_item cover_appmsg_item">
+															<div class="main_img">
+																<img src="{$v['data'][0].cover_id|get_cover_url}"/>
+																<h6>{$v['data'][0].title}</h6>
+															</div>
+															<p class="desc" style="margin: 0;padding: 0;">{$v['data'][0].intro|json_decode}</p>
+														</div>
+														<volist name="v['data'][0].child" id="vv" key="j">
+														<div class="appmsg_sub_item">
+															<p class="title">{$vv.title}</p>
+															<div class="main_img">
+																<img src="{$vv.cover_id|get_cover_url}"/>
+															</div>
+														</div>
+														</volist>
+													</div>
+												</div></if>
+											</div>
+										</li>
+									<elseif condition="$v['type'] eq 'image'"/>
+										<li data-id="{$v['id']}" data-type="image" data-content="{$v['media_id']}" style="z-index: 0;">
+											<div class="desc" style="width: 30%;">
+												<div class="appmsg_content">
+													<div class="appmsg_item cover_appmsg_item">
+														<div class="main_img" style="height:100%">
+															<img src="{$v['data'][0].cover_id|get_cover_url}" width="100%" height="100%"/>
+															<h6>{$v['data'][0].name|json_decode}<br />{$v['data'][0].update_time|time_format=###,"Y年m月d日"}</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									<else />
+									<li data-id="{$v['id']}" data-type="news" data-content="{$v['media_id']}" style="z-index: 0;">
+										<div class="desc">
+										</div>
+									</li>
+									</if>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</div>
+		</foreach>
+	</table>
+	<div class="page"> {$_page|default=''} </div>
+</div>
+
+<div class="modal fade" id="text_show" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		 <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					文字输入框
+				</h4>
+			</div>
+			<div class="modal-body" style="padding: 10px;height: inherit;">
+				<div class="tab_content">
+					<div class="js_textArea inner no_extra">
+						<div class="emotion_editor">
+							<div class="edit_area js_editorArea" contenteditable="true" style="height: 210px;"></div>
+							<div class="editor_toolbar">
+								<p class="editor_tip js_editorTip">还可以输入<em>600</em>字</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" 
+						   data-dismiss="modal">关闭
+						</button>
+						<button type="button" class="btn btn-success" data-id="">
+						   确定
+						</button>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--------------删除菜单框------------------------>
+<div class="modal fade" id="myModal_del" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="left:47%;width:613px; display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" style="margin-top:5px;"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="color:#333;margin:5px 0">
+                    温馨提示
+                </h4>
+            </div>
+            <div class="modal-body" style="color:#333;height:200px;font-size:14px">
+                <div class="msg_icon_wrapper">
+                </div>
+                <div>
+                    <p>删除确认</p>
+					<br>
+                    <p style="color:#8d8d8d">您将删除“自动回复”的消息</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-primary" id="js_del" data-dismiss="modal">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<keywordjs />
+<script>
+	var IMG_PATH = "__ADMIN_ACEADMIN_WX_IMG__";
+	var STATIC = "__ADMIN_ACEADMIN__/js";
+</script>
+<onepicjs />
+<script type="text/javascript">
+function textshow(obj){
+	$('#text_show').modal('show');
+	var obj =  $("#Js_replyList_" + $(obj).attr('data-id') + " li");
+	var type = $(obj).attr("data-type");
+	if(type == "news"){
+		var content = "";
+	}
+	else if(type == "text"){
+		var content = $(obj).attr("data-content");
+	}
+	$(".btn-success").attr("data-id", "Js_replyList_" + $(obj).attr('data-id'));
+	$(".edit_area.js_editorArea").text(content);
+}
+(function(){
+	_init();
+	$("tr.clickgo").click(function(){
+		$(this).next("tr").toggle();
+	});
+	//获取图文
+	$(".jsMsgSenderPopBt").click(function(){
+		 openKeywordMsg('{:U("MaterialNews/material_data")}',selectMnewsCallback, "关键字【" + $(this).find("a").data("keyword") + "】", $(this).find("a").data("id"));
+	});
+	//获取图片
+	$(".jsMsgSenderPopBt_image").click(function(){
+		openKeywordMsgImage('{:U("MaterialOther/material_data",array("type"=>"image"))}',selectImageCallback, "关键字【" + $(this).find("a").data("keyword") + "】", $(this).find("a").data("id"));
+	});
+	$(".Js_rule_save").click(function(e) {
+		var page = $("#myTab ").find(".active").index();
+		var obj = $("#Js_replyList_"+$(this).data("id")+" li");
+		var type = obj.attr("data-type");
+		var value = obj.attr("data-content");
+		//获取列表的id
+		var id =  obj.attr("data-id");
+		//获取列表的规则名
+		var title = $("#Js_ruleTitle_"+$(this).data("id")).val();
+		//获取列表的关键字
+		var keyword = $("#Js_ruleKeyword_"+$(this).data("id")).val();
+		//获取列表的匹配规则
+		var mode = $("#Js_modeKeyword_"+$(this).data("id")).attr("data-mode");
+		if("" == title || "" == keyword || "" == type){
+			updateAlert("请填写完整");
+			return false;
+		}
+		var back = $(this).parent().parent().parent().parent();
+		$.ajax({
+			type: "POST",
+			url: "{:U('edit')}",
+			data: {"type": type, "value": value, "page": page, "id": id, "title": title, "keyword": keyword, "mode": mode},
+			dataType: "json",
+			success: function (data){
+				if(data.status == 1){
+					updateAlert(data.info, 'alert-success');
+					back.prev().find("td").eq(1).html(title);
+					back.prev().find("td").eq(2).html(keyword);
+					if("text" == type){
+						back.prev().find("td").eq(3).html("文字");
+					}
+					else if("news" == type){
+						back.prev().find("td").eq(3).html("图文");
+					}
+					back.toggle();
+					//去除颜色
+					back.prev().removeClass("bg-color");
+				}
+				else{
+					updateAlert(data.info);
+				}
+			},
+			error: function (data){
+				updateAlert(data.info);
+			}
+		});
+		
+    });
+	$("#Js_rule_add").click(function(e) {
+		var page = $("#myTab ").find(".active").index();
+		$.ajax({
+			type: "POST",
+			url: "{:U('edit')}",
+			data: {"page": page, "type": "text", "isadd": 1},
+			dataType: "json",
+			success: function (data){
+				if(data.status == 1){
+					updateAlert(data.info, 'alert-success');
+					window.location.href = data.url;
+				}
+				else{
+					updateAlert(data.info);
+				}
+			},
+			error: function (data){
+				updateAlert(data.info);
+			}
+		});
+	});
+	$("#js_del").click(function(e) {
+		var page = $("#myTab").find(".active").index();
+		var id = $(this).attr('data-id');
+		$.ajax({
+			type: "POST",
+			url: "{:U('delete')}",
+			data: {"page": page, "id": id},
+			dataType: "json",
+			success: function (data){
+				if(data.status == 1){
+					updateAlert(data.info, 'alert-success');
+					window.location.href = data.url;
+				}
+				else{
+					updateAlert(data.info);
+				}
+			},
+			error: function (data){
+				updateAlert(data.info);
+			}
+		});
+	});
+	$('.btn-success').click(function(){
+		$("#" + $(this).data("id") + " li").attr("data-type", "text");
+		$("#" + $(this).data("id") + " li").attr("data-content", $(".js_editorArea").text());
+		$("#" + $(this).data("id") + " .desc").html($(".js_editorArea").text());
+		$('#text_show').modal('hide');
+	})
+	
+	$(".Js_rule_del").click(function(e) {
+		var id = $(this).attr("data-id");
+		$('#js_del').attr('data-id', id);
+		$('#myModal_del').modal('show');
+	});
+	$(".Js_keyword_mode").click(function(e) {
+		var mode = $(this).attr("data-mode");
+		if(1 == mode){
+			$(this).attr("data-mode", 0);
+			$(this).html("未全匹配");
+		}
+		else if(0 == mode){
+			$(this).attr("data-mode", 1);
+			$(this).html("已全匹配");
+		}
+		else{
+			$(this).attr("data-mode", 0);
+			$(this).html("未全匹配");
+		}
+	});
+	
+})();
+</script>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户组添加用户 - bjyadmin</title>
+	<wxcss />
+    <bootstrapcss />
+	<bootstrapjs />
+	<script>
+	var IMG_PATH = "__ADMIN_ACEADMIN_WX_IMG__";
+	var STATIC = "__ADMIN_ACEADMIN__/js";
+	var ROOT = "";
+	var UPLOAD_PICTURE = "{:U('File/uploadPicture')}";
+	</script>
+</head>
+<body>
+<!-- #section:basics/面包屑导航 -->
+	<include file="Index/breadcrumbs" />
+<!-- /section:basics/面包屑导航 -->
+
+<div class="vspace-6-sm"></div>
+<div class="col-sm-12">
+	<!-- #section:elements.tab.option -->
+	<div class="tabbable">
+		<ul class="nav nav-tabs padding-12" id="myTab4" class="fl">
+			<li <empty name="main">class="active"</empty> >
+				<a href="#list" data-toggle="tab">列 表</a>
+			</li>
+			<li <notempty name="main">class="active"</notempty > >
+				<a href="#add" data-toggle="tab">新 增</a>
+			</li>
+			<li>
+				<a href="{:U('syc_news_from_wechat')}">一键下载微信素材库到本地</a>
+			</li>
+			<!--暂时先不做-->
+			<li class="search-form fr cf" style="    position: absolute;right: 4%;">
+				<div class="sleft">
+					<input type="text" name="title" class="search-input" value="" placeholder="请输入标题">
+					<a class="sch-btn" href="javascript:;" id="search" url="{$search_url}">
+					<i class="btn-search"></i></a>
+				</div>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="list" class="tab-pane <empty name='main'>in active</empty>" style="float: none">
+				<include file="list_materialNews_lists" />
+			</div>
+			<div id="add" class="tab-pane <notempty name='main'>in active</notempty >">
+				<include file="add_materialNews" />
+			</div>
+		</div>
+	</div>
+
+	<!-- /section:elements.tab.option -->
+</div><!-- /.col -->
+</body>
+<script type="text/javascript">
+	//搜索功能
+    $("#search").click(function(){
+        var url = $(this).attr('url');
+        var str = $('.search-input').val()
+        var query  = 'title='+str.replace(/(^\s*)|(\s*$)/g,"");
+        if( url.indexOf('?')>0 ){
+            url += '&' + query;
+        }else{
+            url += '?' + query;
+        }
+        window.location.href = url;
+    });
+$(function(){
+    //回车自动提交
+    $('.search-form').find('input').keyup(function(event){
+        if(event.keyCode===13){
+            $("#search").click();
+        }
+    });
+
+})
+</script>
+</html>

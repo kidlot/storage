@@ -1,0 +1,17 @@
+<empty name="list_data">
+<div class="empty_container"><p>您的图片素材库为空，<a href="{:U('MaterialNews/index')}">请先下载素材</a></p></div>
+<else /><div class="data_container"><ul class="material_list">
+      <volist name="list_data" id="vo" key="k">
+      <li class="appmsg_li" data-id="{$vo.id}" style="overflow:hidden" data-value="{$vo.media_id}">
+			<div class="appmsg_content">
+				<div class="appmsg_item cover_appmsg_item">
+					<div class="main_img" style="height:100%">
+						<img src="{$vo.cover_id|get_cover_url}" width="100%" height="100%"/>
+						<h6>{$vo.name|json_decode}<br />{$vo.update_time|time_format=###,"Y年m月d日"}</h6>
+					</div>
+				</div>
+				<div class="hover_area"><i class="icon_card_selected">已选择</i></div>
+			</div>
+        </li></volist></ul>
+</empty>
+<div class="page"> {$_page|default=''} </div></div>

@@ -1,0 +1,55 @@
+<!-- 数据列表 -->
+<style>
+.appmsg_action a{
+	color:black;
+	text-decoration: none;
+}
+</style>
+<div class="table-striped">
+	<ul class="material_list js-masonry" data-masonry-options='{ "itemSelector": ".appmsg_li", "columWidth": 308 }'>
+	<volist name="list_data" id="list">
+		<if condition="$list['count']==1">
+			<!-- 单图文 -->
+			<li class="appmsg_li">
+				<div class="appmsg_item">
+					<h6 class="ellipsis">{$list.title}</h6>
+					<p class="title">{$list.cTime|time_format}</p>
+					<div class="main_img">
+						<a href="{$list.url}" target="_blank"><img src="{$list.cover_id|get_cover_url}"/></a>
+					</div>
+					<p class="desc ellipsis">{$list.intro|json_decode}</p>
+				</div>
+				<div class="appmsg_action">
+					<a href="{:U('index', array('group_id'=>$list[group_id]))}">编辑</a>
+					<a href="javascript:if(confirm('确定删除？'))location='{:U('del_material_by_groupid', array('group_id'=>$list[group_id]))}'">删除</a>
+				</div>
+			</li>
+		<else />
+			<!-- 多图文 -->
+			<li class="appmsg_li">
+				<div class="appmsg_item">
+					<p class="title">{$list.cTime|time_format}</p>
+					<div class="main_img">
+						<a href="{$list.url}" target="_blank"><img src="{$list.cover_id|get_cover_url}"/></a>
+						<h6>{$list.title}</h6>
+					</div>
+					<p class="desc ellipsis">{$list.intro|json_decode}</p>
+				</div>
+				<volist name="list.child" id="vv">
+				<div class="appmsg_sub_item">
+					<p class="title ellipsis">{$vv.title}</p>
+					<div class="main_img">
+						<a href="{$vv.url}" target="_blank"><img src="{$vv.cover_id|get_cover_url}"/></a>
+					</div>
+				</div>
+				</volist>
+				<div class="appmsg_action">
+					<a href="{:U('index', array('group_id'=>$list['group_id']))}">编辑</a>
+					<a href="javascript:if(confirm('确定删除？'))location='{:U('del_material_by_groupid', array('group_id'=>$list[group_id]))}'">删除</a>
+				</div>
+			</li>
+		</if>
+		</volist>
+	</ul>
+</div>
+<div class="page"> {$_page|default=''} </div>

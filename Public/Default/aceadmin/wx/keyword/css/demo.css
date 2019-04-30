@@ -1,0 +1,12 @@
+.kmain{
+	width: 60%;
+    margin: auto 5%;
+	display:none;
+}
+.textshow{
+	padding: 10px;
+	height: inherit;
+}
+.bg-color{
+	background-color: #F9A2A2;
+}

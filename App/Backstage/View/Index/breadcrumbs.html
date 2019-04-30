@@ -1,0 +1,24 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+	<ul class="breadcrumb" style="margin-bottom: 2px;font-size: 12px;">
+		<li>
+			<i class="fa fa-home" style="font-size: 20px;margin-left: 2px;margin-right: 2px;"></i>
+			首页
+		</li>
+		<if condition="$breadcrumbs['title3'] neq ''">
+			<li>{$breadcrumbs['title3']}</li>
+		</if>
+		<if condition="$breadcrumbs['title2'] neq ''">
+			<li>{$breadcrumbs['title2']}</li>
+		</if>
+		<if condition="$breadcrumbs['title1'] neq ''">
+			<li>{$breadcrumbs['title1']}</li>
+		</if>
+	</ul>
+
+</div>
+<!--提交信息-->
+<div id="top-alert" class="top-alert-tips alert-error" style="display: none;">
+  <a class="close" href="javascript:;"><b class="fa fa-times-circle"></b></a>
+  <div class="alert-content"></div>
+</div>

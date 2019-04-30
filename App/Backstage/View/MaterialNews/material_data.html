@@ -1,0 +1,46 @@
+<empty name="list_data">
+<div class="empty_container"><p>您的图文素材库为空，<a href="{:U('MaterialNews/index')}">请先增加素材</a></p></div>
+<else /><select class="input-sm form-control new_select">
+                <option value="1">跳转链接</option>
+				<option value="2">发送图文</option></select>
+				<div class="data_container"><ul class="material_list">
+      <volist name="list_data" id="vo" key="k">
+      <if condition="$vo[count]==1"><li class="appmsg_li" data-id="{$vo.id}" data-group_id="{$vo.group_id}" style="overflow:hidden" data-value="{$vo.media_id}">
+            <div class="appmsg_content">
+				<div class="appmsg_info">
+					<em class="appmsg_date">{$vo.ctime|time_format=###,"Y年m月d日"}</em>
+				</div>
+				<div class="appmsg_item">
+					<h6>{$vo.title}</h6>
+					<div class="main_img">
+						<img src="{$vo.cover_id|get_cover_url}"/>
+					</div>
+					<p class="desc">{$vo.intro|json_decode}</p>
+				</div>
+				<div class="hover_area"><i class="icon_card_selected">已选择</i></div>
+			</div>
+        </li><else /><li class="appmsg_li" data-id="{$vo.id}" data-group_id="{$vo.group_id}" style="overflow:hidden" data-value="{$vo.media_id}">
+			<div class="appmsg_content">
+				<div class="appmsg_info">
+					<em class="appmsg_date">{$vo.ctime|time_format=###,"Y年m月d日"}</em>
+				</div>
+				<div class="appmsg_item cover_appmsg_item">
+					<div class="main_img">
+						<img src="{$vo.cover_id|get_cover_url}"/>
+						<h6>{$vo.title}</h6>
+					</div>
+					<p class="desc">{$vo.intro|json_decode}</p>
+				</div>
+				<volist name="vo.child" id="vv" key="j">
+				<div class="appmsg_sub_item">
+					<p class="title">{$vv.title}</p>
+					<div class="main_img">
+						<img src="{$vv.cover_id|get_cover_url}"/>
+					</div>
+				</div>
+				</volist>
+				<div class="hover_area"><i class="icon_card_selected">已选择</i></div>
+			</div>
+        </li></if></volist></ul>
+</empty>
+<div class="page"> {$_page|default=''} </div></div>
