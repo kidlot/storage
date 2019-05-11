@@ -1,0 +1,185 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WEB打印控件LODOP的样例四:打印设计和定位套打票据</title>
+<meta name="keywords" content="Lodop、Lodop打印控件、WEB打印、C-Lodop、CLodop、lodop控件、云打印、手机打印、免费、AO打印">
+<meta name="description" content="Lodop、Lodop打印控件、WEB打印、C-Lodop、CLodop、lodop控件、云打印、手机打印、免费、AO打印">
+<script language="javascript" src="http://www.lodop.net/demolist/LodopFuncs.js"></script>
+</head>
+<body>
+
+<h2><b><font color="#009999">演示打印设计和定位套打票据:</font></b></h2>
+<p>&nbsp;&nbsp;&nbsp;<font color="#009999">&nbsp;●</font> 用Lodop可以设计出复杂的打印票据样式，先<a href="JavaScript:Preview1()">打印预览</a>我设计的移动通讯公司发票，</p>           
+<p>做这张票样我仅用了几分钟时间，仍得益于Lodop提供的辅助<a href="javascript:Design1()">打印设计</a>功能。</p>
+
+</p>
+<div id="div2">
+
+<style>table,th{border:none;height:18px} td{border: 1px solid #000;height:18px}</style>
+
+<table border=0 cellSpacing=0 cellPadding=0  width="100%" height="200" bordercolor="#000000" style="border-collapse:collapse">
+<thead>
+  <tr>
+    <td width="33%"><b>入库单编号</b></td>
+    <td width="33%"><b>产品名称</b></td>
+    <td width="32%"><b>数量</b></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td width="33%">1</td>
+    <td width="33%">产品A</td>
+    <td width="34%">100</td>
+  </tr>
+  <tr>
+    <td width="33%">2</td>
+    <td width="33%">产品B</td>
+    <td width="34%">200</td>
+  </tr>
+  <tr>
+    <td width="33%">3</td>
+    <td width="33%">产品C</td>
+    <td width="34%">300</td>
+  </tr>
+    <tr>
+    <td width="33%">4</td>
+    <td width="33%">产品D</td>
+    <td width="34%">400　</td>
+  </tr>
+  <tr>
+    <td width="33%">5</td>
+    <td width="33%">产品E</td>
+    <td width="34%">500</td>
+  </tr>
+    <tr>
+    <td width="33%">6</td>
+    <td width="33%">产品F</td>
+    <td width="34%">600</td>
+  </tr>
+  <tr>
+    <td width="33%">7</td>
+    <td width="33%">产品J</td>
+    <td width="34%">700</td>
+  </tr>
+    <tr>
+    <td width="33%">8</td>
+    <td width="33%">产品H</td>
+    <td width="34%">800</td>
+  </tr>
+  <tr>
+    <td width="33%">9</td>
+    <td width="33%">产品I</td>
+    <td width="34%">900</td>
+  </tr>
+    <tr>
+    <td width="33%">10</td>
+    <td width="33%">产品J</td>
+    <td width="34%">110</td>
+  </tr>
+  <tr>
+    <td width="33%">11</td>
+    <td width="33%">产品K</td>
+    <td width="34%">120</td>
+  </tr>
+    <tr>
+    <td width="33%">12</td>
+    <td width="33%">产品L</td>
+    <td width="34%">130</td>
+  </tr>
+  <tr>
+    <td width="33%">13</td>
+    <td width="33%">产品M</td>
+    <td width="34%">140</td>
+  </tr>
+  <tr>
+    <td width="33%">14</td>
+    <td width="33%">产品N</td>
+    <td width="34%">150</td>
+  </tr>
+</tbody>
+<tfoot>
+
+</tfoot>
+</table>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+        var LODOP; //声明为全局变量   
+	function Preview1() {		
+		CreateFullBill();
+	  	LODOP.PREVIEW();		
+	};
+	function Design1() {		
+//		LODOP.SET_SHOW_MODE("HIDE_ITEM_LIST",true);//设置对象列表默认处于关闭状态
+//		LODOP.SET_SHOW_MODE("TEXT_SHOW_BORDER",1); //设置字符编辑框默认为single	
+		createdate();
+		LODOP.PRINT_DESIGN();		
+	};
+function createdate(){	
+		//------循环画线例子begin-----			
+
+
+LODOP.PRINT_INITA(1,6,923,589,"");
+LODOP.ADD_PRINT_TEXT(63,252,368,47,"XXXXXXX有限公司");
+LODOP.SET_PRINT_STYLEA(0,"FontName","华文楷体");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",26);
+LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(120,310,245,25,"地址：xxxxxxx号");
+LODOP.ADD_PRINT_TEXT(153,307,258,20,"电话0000000  联系人：121212122");
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(181,412,99,38,"销货单");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",21);
+LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(189,136,100,20,"客户名称：");
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(220,137,100,20,"联系电话：");
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(189,655,100,20,"单号：111111111");
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+LODOP.ADD_PRINT_TEXT(220,656,193,20,"送货日期：1212121");
+LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+LODOP.SET_PRINT_STYLEA(0,"PageIndex","first");
+
+
+
+LODOP.ADD_PRINT_TABLE(240,121,"100%",220,document.getElementById("div2").innerHTML);
+
+
+		//------------end-------------
+	};
+	
+	function Preview2() {		
+		CreateDataBill();
+	  	LODOP.PREVIEW();		
+	};			
+	function Setup2() {		
+		CreateDataBill();
+		LODOP.PRINT_SETUP();		
+	};
+	function Design2() {	
+		LODOP.PRINT_DESIGN();
+	};	
+	function RealPrint() {		
+		CreateDataBill();
+		//云打印C-Lodop返回结果用回调函数:
+		if (LODOP.CVERSION) {
+			CLODOP.On_Return=function(TaskID,Value){ if (Value) alert("已发出实际打印命令！"); else alert("放弃打印！"); };
+			LODOP.PRINTA();
+			return;
+		};
+		//控件返回结果用语句本身：
+		if (LODOP.PRINTA()) 
+		   alert("已发出实际打印命令！"); 
+		else 
+		   alert("放弃打印！"); 
+	};	
+
+</script> 
+</body>
+</html>
